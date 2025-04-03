@@ -1,19 +1,12 @@
+import CoreConceptItem from '../CoreConceptItem/CoreConceptItem';
+import Section from '../Section';
+
 import componentsImg from '../../assets/components.png';
 import jsxImg from '../../assets/jsx-ui.png';
 import configImg from '../../assets/config.png';
 import stateImg from '../../assets/state-mgmt.png';
 
 import './CoreConcepts.scss';
-
-function CoreConceptItem({title, imagePath, description}: {title: string, imagePath?: string, description: string}): JSX.Element {
-  return (
-    <li>
-      {imagePath ? <img src={imagePath} alt={title} /> : null}
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </li>
-  );
-}
 
 const coreConcepts = [
   {
@@ -40,8 +33,7 @@ const coreConcepts = [
 
 export default function CoreConcepts(): JSX.Element {
   return (
-    <section id="core-concepts">
-      <h2>Core Concepts</h2>
+    <Section title="Core Concepts" id="core-concepts">
       <ul>
         {coreConcepts.map((item, index) => 
           <CoreConceptItem
@@ -50,6 +42,6 @@ export default function CoreConcepts(): JSX.Element {
           />
         )}
       </ul>
-    </section>
+    </Section>
   );
 }

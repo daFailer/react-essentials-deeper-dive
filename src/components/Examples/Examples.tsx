@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import TabButton from '../TabButton/TabButton';
+import Section from '../Section';
 
 import './Examples.scss';
 
@@ -82,8 +83,7 @@ export default function Examples(): JSX.Element {
   }
 
   return (
-    <section id="examples">
-      <h2>Examples</h2>
+    <Section title="Examples" id="examples">
       <menu>
         {buttonConfig.map((item, index) => (
           <TabButton
@@ -96,6 +96,6 @@ export default function Examples(): JSX.Element {
         ))}
       </menu>
       {tabContent}
-    </section>
+    </Section>
   )
 }
