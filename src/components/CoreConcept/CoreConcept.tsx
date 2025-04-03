@@ -5,7 +5,7 @@ import stateImg from '../../assets/state-mgmt.png';
 
 import './CoreConcept.scss';
 
-function CoreConceptItem({title, imagePath, description}: {title: string, imagePath?: string, description: string}) {
+function CoreConceptItem({title, imagePath, description}: {title: string, imagePath?: string, description: string}): JSX.Element {
   return (
     <li>
       {imagePath ? <img src={imagePath} alt={title} /> : null}
@@ -38,7 +38,7 @@ const coreConcepts = [
   },
 ];
 
-export default function CoreConcept() {
+export default function CoreConcept(): JSX.Element {
   return (
     <section id="core-concepts">
       <h2>Core Concept</h2>

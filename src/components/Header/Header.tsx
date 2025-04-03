@@ -9,7 +9,7 @@ const reactDescriptions: string[] = [
   'Fundamental',
 ];
 
-export default function Header() {
+export default function Header(): JSX.Element {
   const description: string = reactDescriptions[getRandomInt(reactDescriptions.length - 1)];
   
   return (

@@ -54,7 +54,7 @@ function Counter() {
   },
 ];
 
-export default function Examples() {
+export default function Examples(): JSX.Element {
   const [currentSelection, setCurrentSelection] = useState<number | undefined>(undefined);
 
   function handleSelect(selectedLabel: number) {
