@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TabButton from '../TabButton/TabButton';
 import Section from '../Section';
+import Tabs from '../Tabs';
 
 import './Examples.scss';
 
@@ -84,8 +85,8 @@ export default function Examples(): JSX.Element {
 
   return (
     <Section title="Examples" id="examples">
-      <menu>
-        {buttonConfig.map((item, index) => (
+      <Tabs
+        buttons={<>{buttonConfig.map((item, index) => (
           <TabButton
             key={item.title}
             onClick={() => handleSelect(index)}
@@ -93,9 +94,10 @@ export default function Examples(): JSX.Element {
           >
             {item.title}
           </TabButton>
-        ))}
-      </menu>
-      {tabContent}
+        ))}</>}
+      >
+        {tabContent}
+      </Tabs>
     </Section>
   )
 }
