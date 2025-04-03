@@ -1,5 +1,5 @@
 import Header from './components/Header/Header';
-import CoreConcept from './components/CoreConcept/CoreConcept';
+import CoreConcepts from './components/CoreConcepts/CoreConcepts';
 import Examples from './components/Examples/Examples';
 
 function App(): JSX.Element {
@@ -7,7 +7,7 @@ function App(): JSX.Element {
     <>
       <Header />
       <main>
-        <CoreConcept />
+        <CoreConcepts />
         <Examples />
       </main>
     </>

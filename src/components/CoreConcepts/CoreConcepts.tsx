@@ -3,7 +3,7 @@ import jsxImg from '../../assets/jsx-ui.png';
 import configImg from '../../assets/config.png';
 import stateImg from '../../assets/state-mgmt.png';
 
-import './CoreConcept.scss';
+import './CoreConcepts.scss';
 
 function CoreConceptItem({title, imagePath, description}: {title: string, imagePath?: string, description: string}): JSX.Element {
   return (
@@ -38,10 +38,10 @@ const coreConcepts = [
   },
 ];
 
-export default function CoreConcept(): JSX.Element {
+export default function CoreConcepts(): JSX.Element {
   return (
     <section id="core-concepts">
-      <h2>Core Concept</h2>
+      <h2>Core Concepts</h2>
       <ul>
         {coreConcepts.map((item, index) => 
           <CoreConceptItem
@@ -50,6 +50,6 @@ export default function CoreConcept(): JSX.Element {
           />
         )}
       </ul>
-  </section>
+    </section>
   );
 }
