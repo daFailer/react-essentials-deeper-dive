@@ -86,6 +86,7 @@ export default function Examples(): JSX.Element {
   return (
     <Section title="Examples" id="examples">
       <Tabs
+        buttonsContainer='menu'
         buttons={<>{buttonConfig.map((item, index) => (
           <TabButton
             key={item.title}

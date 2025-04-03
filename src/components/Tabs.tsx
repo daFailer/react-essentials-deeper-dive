@@ -1,14 +1,17 @@
 interface TabsProps {
     children: React.ReactNode,
-    [key: string]: any
+    buttons: React.ReactNode,
+    buttonsContainer: any,
 }
 
-export default function Tabs({children, buttons}: TabsProps): JSX.Element {
+export default function Tabs({children, buttons, buttonsContainer}: TabsProps): JSX.Element {
+    const ButtonsContainer = buttonsContainer;
+
     return (
         <>
-            <menu>
+            <ButtonsContainer>
                 {buttons}
-            </menu>
+            </ButtonsContainer>
             {children}
         </>
     )
