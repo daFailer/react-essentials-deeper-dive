@@ -1,10 +1,10 @@
 interface TabsProps {
     children: React.ReactNode,
     buttons: React.ReactNode,
-    buttonsContainer: any,
+    buttonsContainer?: any,
 }
 
-export default function Tabs({children, buttons, buttonsContainer}: TabsProps): JSX.Element {
+export default function Tabs({children, buttons, buttonsContainer = 'menu'}: TabsProps): JSX.Element {
     const ButtonsContainer = buttonsContainer;
 
     return (
