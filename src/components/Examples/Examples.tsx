@@ -88,7 +88,7 @@ export default function Examples(): JSX.Element {
         {buttonConfig.map((item, index) => (
           <TabButton
             key={item.title}
-            onSelect={() => handleSelect(index)}
+            onClick={() => handleSelect(index)}
             isActive={currentSelection === index}
           >
             {item.title}

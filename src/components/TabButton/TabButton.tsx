@@ -2,15 +2,15 @@ import './TabButton.scss';
 
 interface TabButtonProps {
   children: React.ReactNode;
-  onSelect: () => void;
   isActive: boolean;
+  [key: string]: any;
 }
 
-export default function TabButton(props: TabButtonProps) {
+export default function TabButton({children, isActive, ...props}: TabButtonProps) {
 
   return (
     <li>
-      <button className={props.isActive ? 'active' : undefined} onClick={props.onSelect}>{props.children}</button>
+      <button className={isActive ? 'active' : undefined} {...props}>{children}</button>
     </li>
   );
 }
